@@ -1,11 +1,20 @@
 language: python
+
 python:
   - 3.7
+
+env:
+  global:
+    - PIPENV_VENV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENV=1
+
 install:
   - pip install -q pipenv
-  - pipenv install --dev
+  - pipenv sync --dev
   - pipenv install codecov
+
 script:
   - pipenv run flake8
+
 after_success:
   - pipenv run codecov
