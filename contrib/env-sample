@@ -1,1 +1,2 @@
 DEBUG=False
+SECRET_KEY=set here the Django secret key
