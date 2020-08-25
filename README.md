@@ -6,3 +6,4 @@ Código desenvolvido no módulo de Django do [Python Pro](https://wwww.python.pr
 [![Build Status](https://travis-ci.com/alvesgabriel/curso-django.svg?branch=master)](https://travis-ci.com/alvesgabriel/curso-django)
 [![Python 3](https://pyup.io/repos/github/alvesgabriel/curso-django/python-3-shield.svg)](https://pyup.io/repos/github/alvesgabriel/curso-django/)
 [![Updates](https://pyup.io/repos/github/alvesgabriel/curso-django/shield.svg)](https://pyup.io/repos/github/alvesgabriel/curso-django/)
+[![codecov](https://codecov.io/gh/alvesgabriel/curso-django/branch/master/graph/badge.svg)](https://codecov.io/gh/alvesgabriel/curso-django)
