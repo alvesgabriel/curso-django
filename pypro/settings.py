@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
 from functools import partial
+from pathlib import Path
 
-from decouple import config, Csv
 import dj_database_url
+from decouple import Csv, config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -77,6 +77,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "pypro.wsgi.application"
 
+INTERNAL_IPS = config("INTERNAL_IPS", cast=Csv(), default="127.0.0.1")
+
+# Configuração Django Debug Toolbar
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.insert(0, "debug_toolbar.middleware.DebugToolbarMiddleware")
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -85,9 +91,7 @@ default_db_url = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
-DATABASES = {
-    "default": config("DATABASE_URL", default=default_db_url, cast=parse_database)
-}
+DATABASES = {"default": config("DATABASE_URL", default=default_db_url, cast=parse_database)}
 
 
 # Password validation
