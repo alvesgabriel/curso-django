@@ -49,9 +49,38 @@
           <div class="container">
             <div class="jumbotron">
               <h2>Curso de Python com Luciano Ramalho</h2>
-              <h4 class="mt-4">Entre na fila de espera</h3>
+              <h4 class="mt-4">Matriculas abertas! Curso R$ 1000,00 (mil reais)</h3>
+
+              <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+              <form
+                action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
+                method="post"
+                onsubmit="PagSeguroLightbox(this); return false;"
+              >
+                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <input
+                  type="hidden"
+                  name="code"
+                  value="1CD80C0BFDFD299884591FBDB9D5E671"
+                />
+                <input type="hidden" name="iot" value="button" />
+                <input
+                  type="image"
+                  src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/120x53-comprar-azul.gif"
+                  name="submit"
+                  alt="Pague com PagSeguro - é rápido, grátis e seguro!"
+                />
+              </form>
+              <script
+                type="text/javascript"
+                src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"
+              ></script>
+              <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+
+              <!-- <h4 class="mt-4">Entre na fila de espera</h3> -->
 
               <!-- Begin Mailchimp Signup Form -->
+              <!-- 
               <form
                 action="https://twitter.us20.list-manage.com/subscribe/post?u=c0edf47eba1a3cd1a150c596e&amp;id=a5082ec336"
                 method="post"
@@ -88,8 +117,9 @@
                         placeholder="Seu nome"
                       />
                     </div>
-
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    -->
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <!--
                     <div
                       style="position: absolute; left: -5000px"
                       aria-hidden="true"
@@ -114,6 +144,7 @@
                   </div>
                 </div>
               </form>
+              -->
               <!--End mc_embed_signup-->
             </div>
             <div class="row">
