@@ -5,9 +5,9 @@
 {% block description %}Página com vídeo gratuito de Python{% endblock description %}
 {% block body %}
 <div class="container">
-  <h1 class="mt-4 mb-3">Vídeo Aperitivo: Motivação</h1>
+  <h1 class="mt-4 mb-3">{{ video.titulo }}</h1>
   <iframe
-    src="https://player.vimeo.com/video/459799222"
+    src="https://player.vimeo.com/video/{{ video.vimeo_id }}"
     width="640"
     height="480"
     frameborder="0"
