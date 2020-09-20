@@ -5,7 +5,7 @@
 {% block description %}Página com vídeo gratuito de Python{% endblock description %}
 {% block body %}
 <div class="container">
-  <h1 class="mt-4 mb-3">{{ video.titulo }}</h1>
+  <h1 class="mt-4 mb-3">{{ video.titulo | default:"Faltando Título" }}</h1>
   <iframe
     src="https://player.vimeo.com/video/{{ video.vimeo_id }}"
     width="640"
