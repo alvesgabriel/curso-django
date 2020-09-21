@@ -1,8 +1,9 @@
 from django.urls import path
 
-from pypro.aperitivos.views import videos
+from pypro.aperitivos.views import indice, video
 
 app_name = "aperitivos"
 urlpatterns = [
-    path("<slug:slug>", videos, name="video"),
+    path("<slug:slug>", video, name="video"),
+    path("", indice, name="indice"),
 ]
