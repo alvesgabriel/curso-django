@@ -9,6 +9,7 @@ pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
 black = "*"
+model-bakery = "*"
 
 [packages]
 django = "*"
