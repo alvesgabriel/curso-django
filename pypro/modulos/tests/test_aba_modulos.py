@@ -12,7 +12,7 @@ def modulos(db):
 
 
 @pytest.fixture
-def resp(client):
+def resp(client, modulos):
     return client.get(reverse("base:home"))
 
 
