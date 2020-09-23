@@ -1,12 +1,11 @@
 import pytest
-from django.test import Client
 from django.urls import reverse
 
 from pypro.django_assertions import assert_contains
 
 
 @pytest.fixture
-def resp(client: Client):
+def resp(client):
     return client.get(reverse("base:home"))
 
 
