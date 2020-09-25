@@ -23,3 +23,7 @@ def resp(client, aula):
 
 def test_titulo(resp, aula):
     assert_contains(resp, aula.titulo)
+
+
+def test_vimeo(resp, aula):
+    assert_contains(resp, aula.vimeo_id)
