@@ -10,6 +10,7 @@ pytest-cov = "*"
 codecov = "*"
 black = "*"
 model-bakery = "*"
+isort = "*"
 
 [packages]
 django = "*"
