@@ -1,9 +1,8 @@
 import pytest
 from django.urls import reverse
 from model_bakery import baker
-
 from pypro.django_assertions import assert_contains
-from pypro.modulos.models import Modulo, Aula
+from pypro.modulos.models import Aula, Modulo
 
 
 @pytest.fixture
@@ -17,13 +16,19 @@ def aula(modulo):
 
 
 @pytest.fixture
-def resp(client, aula):
+def resp(client, aula: Aula):
     return client.get(reverse("modulos:aula", kwargs={"slug": aula.slug}))
 
 
-def test_titulo(resp, aula):
+def test_titulo(resp, aula: Aula):
     assert_contains(resp, aula.titulo)
 
 
-def test_vimeo(resp, aula):
+def test_vimeo(resp, aula: Aula):
     assert_contains(resp, aula.vimeo_id)
+
+
+def test_modulo_breadcrumb(resp, modulo: Modulo):
+    assert_contains(
+        resp, f'<li class="breadcrumb-item"><a href="{modulo.get_absolute_url()}">{modulo.titulo}</a></li>'
+    )
