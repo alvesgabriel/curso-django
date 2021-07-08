@@ -465,11 +465,10 @@
         },
         "isort": {
             "hashes": [
-                "sha256:36f0c6659b9000597e92618d05b72d4181104cf59472b1c6a039e3783f930c95",
-                "sha256:ba040c24d20aa302f78f4747df549573ae1eaf8e1084269199154da9c483f07f"
+                "sha256:eed17b53c3e7912425579853d078a0832820f023191561fcee9d7cae424e0813",
+                "sha256:f65ce5bd4cbc6abdfbe29afc2f0245538ab358c14590912df638033f157d555e"
             ],
-            "index": "pypi",
-            "version": "==5.5.4"
+            "version": "==5.9.2"
         },
         "mccabe": {
             "hashes": [
